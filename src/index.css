@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-arabic-title: "Aref Ruqaa", serif;
+  --font-arabic-body: "Amiri", serif;
+  --font-latin-title: "Cinzel", serif;
+  --font-latin-body: "Playfair Display", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling for the full-screen slider experience */
+}
