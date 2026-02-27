@@ -16,7 +16,7 @@ class ErrorBoundary extends React.Component<{ fallback: React.ReactNode, childre
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: any) {
+  static getDerivedStateFromError(_error: any) {
     return { hasError: true };
   }
 
@@ -90,7 +90,7 @@ function GLTFModel({ path }: { path: string }) {
   );
 }
 
-export function Model({ path, isActive, color }: ModelProps) {
+export function Model({ path, isActive, color: _color }: ModelProps) {
   const group = useRef<THREE.Group>(null);
   
   const speedRef = useRef(0);
@@ -103,7 +103,7 @@ export function Model({ path, isActive, color }: ModelProps) {
     }
   }, [isActive]);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (group.current) {
       speedRef.current = THREE.MathUtils.lerp(speedRef.current, targetSpeed, delta * 2);
       group.current.rotation.y += delta * speedRef.current;

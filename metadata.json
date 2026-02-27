@@ -1,5 +1,5 @@
 {
   "name": "Algerian Heritage Fashion",
   "description": "A premium 3D showcase for traditional Algerian women's clothing featuring interactive 3D models and multi-language support.",
-  "requestFramePermissions": []
+  "requestFramePermissions": ["microphone"]
 }
